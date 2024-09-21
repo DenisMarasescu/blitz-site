@@ -32,13 +32,13 @@ export default function Home() {
                 <polyline points="7 10 12 15 17 10"></polyline>
                 <line x1="12" y1="15" x2="12" y2="3"></line>
               </svg> */}
-              <Image className="bg-white p-1 box-content rounded-lg" src="/calendar.svg" width={20} height={20} />
+              <Image className="bg-white p-1 box-content rounded-lg" src="/calendar.svg" width={20} height={20} alt="schedule"/>
               programează o sesiune
             </button>
           </div>
           <div className="flex flex-col justify-center items-end pr-10">
             {/* <div className="bg-white w-3/4 h-80"></div> Placeholder for the image */}
-            <Image className="rounded-lg object-cover" src="/mihnea.png" width={300} height={450}/>
+            <Image className="rounded-lg object-cover" src="/mihnea.png" width={300} height={450} alt="Mihnea Turloiu Firica"/>
             <div className="text-right">
               <p className="font-bold text-black">Turloiu Firica Mihnea</p>
               <p className="text-gray-500">CEO | Product Designer</p>
