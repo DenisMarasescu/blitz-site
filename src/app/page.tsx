@@ -1,113 +1,117 @@
 import Image from "next/image";
+import Chatbot from '../components/Chatbot';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div>
+      <div className="flex flex-col gap-y-8 items-center text-center mt-28 mb-36">
+        <h1 className="text-6xl font-semibold max-w-2/3 tracking-wide gap-y-4 flex flex-col">Lansează-te în online<br/> <span>cu ajutorul nostru</span></h1>
+        <p className="mt-4 text-lg">Lucrăm împreună și te ajutăm <br /> să atingi rezultate inimaginabile</p>
+        <button className="px-20 py-3 bg-[#E5B762] text-white font-bold rounded-lg hover:bg-[#D4A653] transition-all duration-300">
+          Programează o întâlnire 
+        </button>
+        <Image src="/mouse.svg" alt="mouse" width={50} height={50} className="mt-12"/>
+        {/* <Chatbot /> */}
+      </div>
+      
+      <div className="py-16 px-32">
+        <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-28">
+          <div>
+            <p className="text-gray-500 mb-2">Aici ne vom descoperi unul pe celălalt</p>
+            <h2 className="text-4xl font-semibold tracking-wider text-black mb-6">
+              Descoperă motivele pentru care ai nevoie de un website
+            </h2>
+            <p className="text-md text-black mb-6 tracking-wide font-medium">
+              Exercițiul nostru de descoperire ne ajută să-ți întelegem mai bine afacerea.
+              În acest exercițiu ți se vor adresa mai multe întrebări cu scopul de a afla mai multe despre
+              problema care îți afectează afacerea, astfel încât să o putem rezolva eficient.
+            </p>
+            <button className="px-6 py-2 bg-[#E5B762] text-white font-bold rounded-lg hover:bg-[#D4A653] transition-all duration-300 flex items-center gap-4">
+              {/* <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg> */}
+              <Image className="bg-white p-1 box-content rounded-lg" src="/calendar.svg" width={20} height={20} />
+              programează o sesiune
+            </button>
+          </div>
+          <div className="flex flex-col justify-center items-end pr-10">
+            {/* <div className="bg-white w-3/4 h-80"></div> Placeholder for the image */}
+            <Image className="rounded-lg object-cover" src="/mihnea.png" width={300} height={450}/>
+            <div className="text-right">
+              <p className="font-bold text-black">Turloiu Firica Mihnea</p>
+              <p className="text-gray-500">CEO | Product Designer</p>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+
+      
+      
+
+
+
+      <div className="bg-[#FFFAF4] py-16 px-8 mt-48 mb-48">
+        <div className="container mx-auto text-center mb-32">
+          <p className="text-gray-500 mb-2">Câteva dintre</p>
+          <h2 className="text-5xl font-semibold tracking-wider text-black">
+            Serviciile pe care le oferim
+          </h2>
+        </div>
+        <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="text-center">
+            <div className="flex items-center justify-center gap-6">
+              <div className="bg-[#FFF2E2] p-4 rounded-md inline-block mb-4">
+                <Image src="/webdesign.svg" alt="Web Design Icon" className="mx-auto" width={35} height={35}/>
+              </div>
+              <h3 className="text-2xl font-semibold tracking-wider text-black mb-2">Web design</h3>
+            </div>
+            <div className="flex justify-center">
+              <p className="text-black tracking-wider font-medium w-2/3">
+                Proiecte web ușor de utilizat, receptive și personalizate.
+              </p>
+            </div>
+          </div>
+          <div className="text-center">
+            <div className="flex items-center justify-center gap-6">
+              <div className="bg-[#FFF2E2] p-4 rounded-md inline-block mb-4">
+                <Image src="/development.svg" alt="Development Icon" className="mx-auto" width={35} height={35}/>
+              </div>
+              <h3 className="text-2xl font-semibold tracking-wider text-black mb-2">Development</h3>
+            </div>
+            <div className="flex justify-center">
+              <p className="text-black tracking-wider font-medium w-2/3">
+                Soluții software personalizate pentru nevoile afacerii tale.
+              </p>
+            </div>
+          </div>
+          <div className="text-center">
+            <div className="flex items-center justify-center gap-6">
+              <div className="bg-[#FFF2E2] p-4 rounded-md inline-block mb-4">
+                <Image src="/branding.svg" alt="Branding Icon" className="mx-auto" width={35} height={35}/>
+              </div>
+              <h3 className="text-2xl font-semibold tracking-wider text-black mb-2">Branding</h3>
+            </div>
+            <div className="flex justify-center">
+              <p className="text-black tracking-wider font-medium w-2/3">
+                Conferă sentimente care corelează cu audiența ta țintă.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
+      <div className="container mx-auto text-center mb-2 mt-48">
+          <p className="text-gray-500 mb-2">Uite cum poate arăta</p>
+          <h2 className="text-5xl font-semibold tracking-wider text-black">
+          Chatbotul tău
           </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+        </div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+      <Chatbot />
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </div>
   );
 }

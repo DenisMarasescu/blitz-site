@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Image from 'next/image';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +17,27 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className="bg-[#FFFAF4] flex flex-col min-h-screen">
+        <header className="p-8 px-16 flex w-full justify-between">
+          <div className="flex w-fit">
+            <div className="container mx-0 text-[#000000] text-4xl font-bold">Blitz</div>
+            <Image src="/lightning.svg" alt="Logo" width={30} height={30}/>
+          </div>
+          <button className="px-6 py-2 border-2 border-dashed border-black rounded-full text-black font-bold hover:border-solid hover:bg-gray-100 transition-all duration-300">
+            contacteaza-ne
+          </button>
+        </header>
+        <main className="container mx-auto p-4 flex-grow">{children}</main>
+        <footer className="p-8 px-16 mt-auto flex w-full justify-between">
+            <div className="flex flex-col w-fit gap-y-1">
+              <div className="flex w-fit">
+                <div className="container mx-0 text-[#000000] text-4xl font-bold">Blitz</div>
+                <Image src="/lightning.svg" alt="Logo" width={30} height={30}/>
+              </div>
+              <p>no.1 agency in 🇷🇴</p>
+            </div>
+        </footer>
+      </body>
     </html>
   );
 }
