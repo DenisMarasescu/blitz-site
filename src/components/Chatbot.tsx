@@ -9,8 +9,10 @@ const groq = new Groq({
 });
 
 export default function Chatbot() {
-  const [messages, setMessages] = useState([
-    { role: "assistant" as "assistant", content: "Salut! Cu ce te putem ajuta?" },
+  const [messages, setMessages] = useState<
+    { role: "assistant" | "user"; content: string }[]
+  >([
+    { role: "assistant", content: "Salut! Cu ce te putem ajuta?" },
   ]);
   const [inputValue, setInputValue] = useState("");
 
