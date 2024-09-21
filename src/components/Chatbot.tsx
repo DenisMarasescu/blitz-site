@@ -10,7 +10,7 @@ const groq = new Groq({
 
 export default function Chatbot() {
   const [messages, setMessages] = useState([
-    { role: "assistant", content: "Salut! Cu ce te putem ajuta?" },
+    { role: "assistant" as "assistant", content: "Salut! Cu ce te putem ajuta?" },
   ]);
   const [inputValue, setInputValue] = useState("");
 
@@ -20,7 +20,7 @@ export default function Chatbot() {
     // Add the user's message to the chat
     const newMessages = [
       ...messages,
-      { role: "user", content: inputValue },
+      { role: "user" as "user", content: inputValue },
     ];
     setMessages(newMessages);
 
@@ -31,7 +31,7 @@ export default function Chatbot() {
       const response = await groq.chat.completions.create({
         messages: [
           ...newMessages,
-          { role: "system", content: "You are Denis, the AI made by Blitz Software Development. You are a romanian assistant that must answer in romanian kindly to possible customer's questions on short." },
+          { role: "system" as "system", content: "You are Denis, the AI made by Blitz Software Development. You are a romanian assistant that must answer in romanian kindly to possible customer's questions on short." },
         ],
         model: "llama-3.1-70b-versatile", // Replace with your desired model
       });
